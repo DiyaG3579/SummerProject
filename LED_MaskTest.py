@@ -11,12 +11,21 @@ GPIO.setmode(GPIO.BOARD)
 r = 11
 g = 12
 b = 13
+r2 = 15
+g2 = 16
+b2 = 18
 GPIO.setup(r, GPIO.OUT)
 GPIO.setup(g, GPIO.OUT)
 GPIO.setup(b, GPIO.OUT)
+GPIO.setup(r2, GPIO.OUT)
+GPIO.setup(g2, GPIO.OUT)
+GPIO.setup(b2, GPIO.OUT)
 GPIO.output(r, GPIO.LOW)
 GPIO.output(g, GPIO.LOW)
 GPIO.output(b, GPIO.LOW)
+GPIO.output(r2, GPIO.LOW)
+GPIO.output(g2, GPIO.LOW)
+GPIO.output(b2, GPIO.LOW)
 
 
 camera = Picamera2()
@@ -40,6 +49,7 @@ if (M["m00"] != 0.0):
 
 if blue:
     GPIO.output(b, GPIO.HIGH)
+    GPIO.output(b2, GPIO.HIGH)
     time.sleep(2)
 
 GPIO.cleanup()
