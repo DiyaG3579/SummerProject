@@ -6,6 +6,9 @@ GPIO.setmode(GPIO.BOARD)
 r = 11
 g = 12
 b = 13
+r2 = 15
+g2 = 16
+b2 = 18
 
 #Actual setup for the PI and starting them all as off
 GPIO.setup(r, GPIO.OUT)
